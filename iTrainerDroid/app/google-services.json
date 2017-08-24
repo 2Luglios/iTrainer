@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "533558935184",
+    "firebase_url": "https://itrainer-2c9c2.firebaseio.com",
+    "project_id": "itrainer-2c9c2",
+    "storage_bucket": "itrainer-2c9c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533558935184:android:d2be92500899d201",
+        "android_client_info": {
+          "package_name": "br.com.tamadrum.itrainer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533558935184-rd78l777g3csqkph0hqmk7of783ejg7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.tamadrum.itrainer",
+            "certificate_hash": "914010a52351a9575515f2200504b86904632e0a"
+          }
+        },
+        {
+          "client_id": "533558935184-b7qmlnqg1bnom5st27tdm9iuhlv2g09c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE4IfYoQdZpKSLsV7F3Y0SB4ywD0I0mPM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533558935184-b7qmlnqg1bnom5st27tdm9iuhlv2g09c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_meusdados"
+        android:title="Meus Dados"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_treinos"
+        android:title="Treinos"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_personal"
+        android:title="Personal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_academias"
+        android:title="Academias"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_avaliacoes"
+        android:title="Avaliações"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_financeiro"
+        android:title="Financeiro" />
+</menu>

@@ -1,0 +1,240 @@
+Av. Vila Ema 2024 - 6,7 as 10
+
+Login com facebook
+
+iFood de personal trainer
+gymPass de personal
+ganhar no volume
+catho de personal
+propaganda
+cobrar a parte por avaliacao fisica
+relatorio de avaliacoes no app
+depois cobrar por avaliacao nutricional
+
+planos
+    bronze 2x
+    prata 3x
+    ouro 5x
+    diamante 5x-7x
+
+Cadastro de Personal Trainer
+
+cadastro
+CREFI - confirmação
+avaliacao
+comentarios
+qualificacao
+    fitness
+    lutas
+    natacao
+    corrida
+    funcional
+regiao de atuacao
+calendario aberto
+mini curriculum
+
+Cliente - credito mensal
+
+cadastro
+anamnese
+avaliacao fisica
+1 atendimento - contrato
+termo de responsabilidade
+busca por profissional e filtro de qualificacao
+
+confirmacao 2 vias entre profissional e cliente
+
+cadastro de academias
+
+valor para levar personal e clientes
+
+     CLIENTE --- Personal --- Academia
+            \      /|\       /|
+             \      |       /
+          $$$ \     | $    /$
+              _\|   |     /
+                 Sistema
+
+Conversar sobre o passo a passo do app desde o login até a
+compra do serviço - pagamento, ...
+
+
+
+
+
+
+
+
+/*
+HOMEM
+        Classificação	IMC	PESO
+        Magreza	< 18.5	< 58.6 Kg
+        Normal	18.5 a 24.9	58.6 a 78.9 Kg
+        Sobrepeso	24.9 a 30	78.9 a 95.1 Kg
+        Obesidade	> 30	> 95.1 Kg
+MULHER
+        Classificação	IMC	PESO
+        Magreza	< 18.5	< 58.6 Kg
+        Normal	18.5 a 24.9	58.6 a 78.9 Kg
+        Sobrepeso	24.9 a 30	78.9 a 95.1 Kg
+        Obesidade	> 30	> 95.1 Kg
+CRIANCA MENINO
+        Classificação	IMC	PESO
+        Magreza	< 13.2	< 41.8 Kg
+        Normal	13.2 a 16.9	41.8 a 53.5 Kg
+        Sobrepeso	16.9 a 18.4	53.5 a 58.3 Kg
+        Obesidade	> 18.4	> 58.3 Kg
+CRIANCA MENINA
+        Classificação	IMC	PESO
+        Magreza	< 12.8	< 40.6 Kg
+        Normal	12.8 a 17.1	40.6 a 54.2 Kg
+        Sobrepeso	17.1 a 18.9	54.2 a 59.9 Kg
+        Obesidade	> 18.9	> 59.9 Kg
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package br.com.tamadrum.itrainer;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import br.com.tamadrum.itrainer.customview.CustomCalendarioView;
+import br.com.tamadrum.itrainer.customview.OnDateChangeListener;
+import br.com.tamadrum.itrainer.firebase.SendMsg;
+import br.com.uol.pslibs.checkouttransparent.PSCheckout;
+import br.com.uol.pslibs.checkouttransparent.vo.PSCheckoutRequest;
+import br.com.uol.pslibs.checkouttransparent.vo.PSCheckoutResponse;
+
+public class CalendarioActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calendario_layout);
+
+        //PAGAMENTO
+//        SellerVO sellerVO = new SellerVO("ettore.tamadrum@gmail.com", "D14D202A28BF41C49D3F94171369F1A5");
+//        PSCheckout.init(this, sellerVO);
+
+//        addOverlay();
+
+//        try {
+//            new ReadPrefs(this).readPaises();
+//            new ReadPrefs(this).readEstados("br");
+//            new ReadPrefs(this).readCidades("br", "sp");
+//            List<String> strings = new ReadPrefs(this).readBairros("br", "sp", "sp");
+//            for(int i = 0 ; i < strings.size(); i++ ) {
+//                Log.d("Activity", "bairro: " + strings.get(i));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+    }
+
+//    private PSCheckout.PSCheckoutListener psCheckoutListener = new PSCheckout.PSCheckoutListener() {
+//        @Override
+//        public void onSuccess(PSCheckoutResponse responseVO) {
+//            Toast.makeText(CalendarioActivity.this, "Success: "+responseVO.getMessage(), Toast.LENGTH_LONG).show();
+//        }
+//
+//        @Override
+//        public void onFailure(PSCheckoutResponse responseVO) {
+//            Toast.makeText(CalendarioActivity.this, "Fail: "+responseVO.getMessage() + "[" + responseVO.getCode() + "]", Toast.LENGTH_LONG).show();
+//        }
+//
+//        @Override
+//        public void onProcessing() {
+//            Toast.makeText(CalendarioActivity.this, "Processing...", Toast.LENGTH_LONG).show();
+//        }
+//    };
+
+//    @Override
+//    public boolean onContextItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.menu_contexto_confirmar:
+//
+//                //PAGAMENTO
+//                PSCheckoutRequest psCheckoutRequest = new PSCheckoutRequest();
+//
+//                //NUMERO DO CARTAO
+//                psCheckoutRequest.setCreditCard("4111111111111111");
+//                //CVV DO CARTAO
+//                psCheckoutRequest.setCvv("123");
+//                //MÊS DE EXPIRACAO (Ex: 03)
+//                psCheckoutRequest.setExpMonth(/*expiry.substring(0,2)*/"" + 12);
+//                //ANO DE EXPIRACAO, ULTIMOS 2 DIGITOS (Ex: 17)
+//                psCheckoutRequest.setExpYear(/*expiry.substring(3,5)*/"" + 30);
+//                //VALOR DA TRANSACAO
+//                psCheckoutRequest.setAmountPayment(1.00);
+//                //DESCRICAO DO PRODUTO/SERVICO
+//                psCheckoutRequest.setDescriptionPayment("test");
+//
+//                PSCheckout.pay(psCheckoutRequest, psCheckoutListener, (AppCompatActivity) this);
+//
+//                break;
+//            case R.id.menu_contexto_remover:
+//                break;
+//        }
+//        return super.onContextItemSelected(item);
+//    }
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//
+//        //PAGAMENTO
+//        PSCheckout.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+//    }
+
+}
