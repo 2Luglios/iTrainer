@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iTrainer</title>
+  </head>
+  <body>
+    <h1>Backup Feito!</h1>
+
+
+
+
+    <script src="dateformat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyCDlcej85wEswZOgLitODLEBQi_TAe3q1w",
+        authDomain: "itrainer-2c9c2.firebaseapp.com",
+        databaseURL: "https://itrainer-2c9c2.firebaseio.com",
+        projectId: "itrainer-2c9c2",
+        storageBucket: "itrainer-2c9c2.appspot.com",
+        messagingSenderId: "533558935184"
+      };
+      firebase.initializeApp(config);
+
+      var database = firebase.database();
+      var storage = firebase.storage();
+      var storageRef = storage.ref();
+
+      var now = new Date();
+      var formatDate = dateFormat(now, "yyyymmdd-HHMMss");
+
+      var backupRef = storageRef.child('backupDB/' + formatDate + '.json');
+
+      firebase.database().ref().once('value')
+                            .then(function(snapshot) {
+        var db = JSON.stringify(snapshot.val());
+        console.log(db);
+        backupRef.putString(db);
+      });
+    </script>
+  </body>
+</html>

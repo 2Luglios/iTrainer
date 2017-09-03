@@ -1,0 +1,6 @@
+framework module Pods_iTrainerIOS {
+  umbrella header "Pods-iTrainerIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
